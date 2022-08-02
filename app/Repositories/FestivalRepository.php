@@ -11,9 +11,9 @@ class FestivalRepository
       return Festival::all();
     }
 
-    public function getWithCategory($category)
-    {
-        return Festival::   ->get()
-    }
+//    public function getWithCategory($category)
+//    {
+//        return Festival::   ->get()
+//    }
 
 }

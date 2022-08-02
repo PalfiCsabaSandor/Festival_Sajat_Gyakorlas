@@ -18,13 +18,13 @@ return new class extends Migration
             $table->foreignId('id')
                 ->constrained('festivals');
             $table->string('name');
-            $table->binary('picture'); #A blobra errort adott
+            $table->string('picture'); #A blobra errort adott
             $table->text('description');
             $table->string('artist_name');
             $table->dateTime('start_date');
             $table->dateTime('end_date');
-            $table->string('latitude');
-            $table->string('longitude');
+            $table->decimal('latitude');
+            $table->decimal('longitude');
             $table->timestamps();
         });
     }
