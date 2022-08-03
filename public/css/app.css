@@ -1,3 +1,60 @@
 body {
-    background-color: #fc0;
+    background-color: #fff;
+}
+
+ul {
+    list-style: none inside;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+dl > * {
+    display: inline;
+
+}
+
+
+.columns {
+    display: flex;
+}
+
+.col1 {
+    padding-right: 2rem;
+}
+
+.col2 {
+}
+
+.festivals-list {
+    padding: 0 1rem;
+}
+
+
+.festival-block {
+    background-color: #eee;
+    margin-bottom: 2rem;
+    padding: 1rem;
+}
+
+.festival-concert-list {
+    margin-top: 1rem;
+}
+
+.festival-concert-list li {
+    display: flex;
+    margin-bottom: 1rem;
+    justify-content: space-between;
+}
+
+.festival-concert-list li input {
+    margin-right: 1rem;
+}
+
+.festival-concert-list li label {
+    cursor: pointer;
+}
+
+.festival-concert-list label strong,
+.festival-concert-list label small {
+    display: block;
 }

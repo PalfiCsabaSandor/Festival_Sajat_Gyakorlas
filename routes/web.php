@@ -18,4 +18,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/festivals', [\App\Http\Controllers\FestivalController::class, 'index']);
+Route::get('festivals', [\App\Http\Controllers\FestivalController::class, 'index']);
+//Route::get('user/{}'. [\App\Http\Controllers\UserController::class, ]);
+
+Route::get('test', function() {
+    return view('test');
+});
