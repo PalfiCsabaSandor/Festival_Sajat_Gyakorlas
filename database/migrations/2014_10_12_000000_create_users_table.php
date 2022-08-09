@@ -23,6 +23,7 @@ return new class extends Migration
             $table->boolean('role');
             $table->boolean('newsletter');
             $table->timestamps();
+            $table->string('remember_token')->nullable();
         });
     }
 
