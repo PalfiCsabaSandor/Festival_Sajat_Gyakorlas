@@ -1,0 +1,45 @@
+.footer {
+    background: lightslategrey;
+    height: 150px;
+}
+
+.fa{
+    padding: 20px;
+    text-align: center;
+    margin:5px 2px;
+    font-size: 30px;
+    width:50px;
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+    width: 80px;
+}
+
+.fa-youtube {
+    background: #bb0000;
+    color: white;
+    width:80px;
+}
+
+.fa-linkedin {
+    background: #007bb5;
+    color: white;
+    width: 80px;
+}
+.fa:hover {
+    opacity: 0.9;
+}
+
+.center{
+   display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.copyright{
+    size:9px;
+    color:white;
+    text-align: center;
+}

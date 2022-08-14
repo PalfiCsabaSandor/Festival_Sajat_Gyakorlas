@@ -1,0 +1,19 @@
+.profile_title {
+    font-size: 500%;
+    color: blue;
+    text-align: center;
+}
+
+table, th, td {
+    border:1px solid;
+    align-content: center;
+    width: 33%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.profile_calendar {
+    font-size: 500%;
+    color: darkorange;
+    text-align: center;
+}

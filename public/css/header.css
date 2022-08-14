@@ -13,6 +13,18 @@
 }
 
 .linkbar {
-    font-size:150%
+    font-size: 150%;
+
 }
+
+.linkbar.a {
+    justify-content: space-around;
+}
+
+.header{
+    font-size: 700%;
+    text-align: center;
+    color: darkblue;
+}
+
 
