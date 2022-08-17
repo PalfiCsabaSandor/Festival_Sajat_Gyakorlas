@@ -1,5 +1,6 @@
 <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 <link rel="stylesheet" href="{{ asset('css/header.css') }}" type="text/css">
+
 <body>
     <div class="header">Summer Planner</div>
 
@@ -14,7 +15,14 @@
         @auth
             <a href = {{url('profile')}}>Profile</a>
         @endauth
-
+        <div class="logoutlink">
+            @auth
+            <form action="{{ route('logout') }}" method="post">
+                @csrf
+                <button type="submit">Logout</button>
+            </form>
+            @endauth
+        </div>
 
     </div>
 

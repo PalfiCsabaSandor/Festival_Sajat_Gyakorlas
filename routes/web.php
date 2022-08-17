@@ -13,20 +13,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/', function () { //Ezzel a modszerrel minden phpt a blade-ben kell imlementalni
     return view('welcome');
 });
 
-Route::get('/festivals', function () {
-    return view('festivals');
-});
+Route::get('/festivals', [\App\Http\Controllers\FestivalController::class, 'getAllFestivalData']);
 
 Route::get('/profile', [\App\Http\Controllers\UserController::class,'getLoggedUserData']
 ) ->middleware('auth'); //Ezzel a modszerrel a Controllerben kell implementalni
 
-Route::get('/events', function(){ //Ezzel a modszerrel minden phpt a blade-ben kell imlementalni
-    return view('events');
-});
+Route::get('/events', [\App\Http\Controllers\EventController::class, 'getAllEventData']);
+
+
+Route::post("/logout",[LogoutController::class,"store"])->name("logout");
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');

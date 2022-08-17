@@ -13,7 +13,7 @@ class FestivalController extends Controller
 
     public function getAllFestivalData() {
         $alldata = Festival::all();
-        return view('festivals', ["alldata"=$alldata]);
+        return view('festivals', ["alldata"=>$alldata]);
 
     }
 }
