@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Event;
 use Illuminate\Http\Request;
 use App\User;
+use Illuminate\Support\Facades\Log;
 
 
 class UserController extends Controller
@@ -14,10 +16,11 @@ class UserController extends Controller
         return User::all();
     }
 
-    function getOneUserData()
+    function getLoggedUserData()
     {
         $user = auth()->user();
-        return $user;
-        return view('user');
+        $events = $user->events;
+            Log::info($events);
+        return view('user',['user'=>$user, 'events' => $events]);
     }
 }

@@ -20,33 +20,32 @@
 <table>
     <tr>
         <td>name</td>
-        <td>userName</td>
+        <td>{{$user->name}}</td>
     </tr>
     <tr>
         <td>email</td>
-        <td>{{'$user'}}</td>
+        <td>{{$user->email}}</td>
     </tr>
     <tr>
         <td>image</td>
-        <td>image</td>
+        <td>{{$user->image}}</td>
     </tr>
-    <tr>
-        <td>password</td>
-        <td>userPassword</td>
-    </tr>
+
     <tr>
         <td>age</td>
-        <td>userAge</td>
+        <td>{{$user->age}}</td>
     </tr>
     <tr>
-        <td>newsletter</td>
-        <td>userNewsLetter {{}}</td>
+        <td>Subscribtion</td>
+        <td>{{$user->newsletter}}</td>
     </tr>
 
 </table>
 <div class="profile_calendar">Your Calendar: </div>
-
-
+{{--        Be lehet tenni a Calendarba--}}
+@foreach ($events as $event)
+    {{ $event->name }} <br>
+@endforeach
 </body>
 </html>
 @include('footer')

@@ -21,14 +21,10 @@ Route::get('/festivals', function () {
     return view('festivals');
 });
 
-Route::get('/profile', function(){
-    return view('user');
-}) ->middleware('auth');
+Route::get('/profile', [\App\Http\Controllers\UserController::class,'getLoggedUserData']
+) ->middleware('auth'); //Ezzel a modszerrel a Controllerben kell implementalni
 
-//Route::get('/profile', [\App\Http\Controllers\UserController::class,'getOneUserData']
-//) ->middleware('auth');
-
-Route::get('/events', function(){
+Route::get('/events', function(){ //Ezzel a modszerrel minden phpt a blade-ben kell imlementalni
     return view('events');
 });
 

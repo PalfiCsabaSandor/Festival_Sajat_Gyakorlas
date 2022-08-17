@@ -6,14 +6,16 @@
 
     <div class="linkbar">
         <a href = {{url('/')}}>HOME</a>
+        @if (!Auth::user())
         <a href = {{url('login')}}>Login</a>
         <a href= "{{url('register')}}">Register</a>
+        @endif
         <a href = {{url('festivals')}}>Festivals</a>
-
+        @auth
+            <a href = {{url('profile')}}>Profile</a>
+        @endauth
 
 
     </div>
-    <div id = 'header_image'>
-        <img src="{{url('/images/HeaderPic.jpg')}}" class="stretch" alt="Image">
-    </div>
+
 </body>
