@@ -1,0 +1,17 @@
+.events-list {
+    margin-bottom: 2rem;
+}
+
+.events-list .event {
+    display: flex;
+    align-items: center;
+}
+
+.col2 {
+    margin-right: 1rem;
+}
+
+
+
+
+

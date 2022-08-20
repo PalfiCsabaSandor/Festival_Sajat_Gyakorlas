@@ -4,12 +4,21 @@
     text-align: center;
 }
 
-table, th, td {
-    border:1px solid;
-    align-content: center;
-    width: 33%;
-    margin-right: auto;
-    margin-left: auto;
+.userinfo {
+    width: 100%;
+    margin-bottom: 2rem;
+    font-size: 200%;
+}
+
+.userinfo td{
+    padding: 1rem;
+    border-bottom: 1px solid #cee;
+
+}
+
+.userinfo td:first-child{
+    font-weight: bold;
+    padding-left: 0;
 }
 
 .profile_calendar {
@@ -17,3 +26,4 @@ table, th, td {
     color: darkorange;
     text-align: center;
 }
+

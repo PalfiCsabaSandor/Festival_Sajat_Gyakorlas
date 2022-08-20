@@ -2,14 +2,30 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Festival;
+use App\Models\Event;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class EventController extends Controller
 {
+
+
     public function getAllEventData()
     {
-        $eventData = Festival::all();
-        return view('events', ["eventData" => $eventData]);
+        $eventsList = Event::with('festival')->get();
+
+        return view('events', ["eventData" => $eventsList]);
     }
+
+    public function updateUserEvents(Request $request)
+    {
+        $authenticatedUser = Auth::user();
+        $authenticatedUser->events()->detach();
+        $authenticatedUser->events()->attach($request->events);
+        return $this->getAllEventData();
+
+    }
+
+
+
 }

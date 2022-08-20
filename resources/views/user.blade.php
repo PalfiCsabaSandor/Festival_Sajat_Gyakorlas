@@ -1,23 +1,19 @@
-@include('header');
+@extends('layout')
 
-<html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/user.css" type="text/css">
-    <title>Users</title>
-</head>
+@section('title', 'Events')
 
-<body>
+@section('styles')
+    <link rel="stylesheet" href="{{ asset('css/user.css') }}" type="text/css">
+@endsection
+
+@section('content')
 <div class="profile_title">Your profile data:</div>
 
 <div class="profile_picture">
 {{--    <img src="" alt="no picture yet">--}}
 </div>
 
-<table>
+<table class="userinfo">
     <tr>
         <td>name</td>
         <td>{{$user->name}}</td>
@@ -36,7 +32,7 @@
         <td>{{$user->age}}</td>
     </tr>
     <tr>
-        <td>Subscribtion</td>
+        <td>Subscription</td>
         <td>{{$user->newsletter}}</td>
     </tr>
 
@@ -46,6 +42,4 @@
 @foreach ($events as $event)
     {{ $event->name }} <br>
 @endforeach
-</body>
-</html>
-@include('footer')
+@endsection

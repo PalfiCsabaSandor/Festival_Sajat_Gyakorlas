@@ -23,6 +23,9 @@ Route::get('/profile', [\App\Http\Controllers\UserController::class,'getLoggedUs
 ) ->middleware('auth'); //Ezzel a modszerrel a Controllerben kell implementalni
 
 Route::get('/events', [\App\Http\Controllers\EventController::class, 'getAllEventData']);
+Route::post('/events', [\App\Http\Controllers\EventController::class, 'updateUserEvents']);
+
+Route::get('/festivals/{festival}',  [\App\Http\Controllers\FestivalController::class, 'details']);
 
 
 Route::post("/logout",[LogoutController::class,"store"])->name("logout");

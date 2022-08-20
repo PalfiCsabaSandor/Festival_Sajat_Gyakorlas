@@ -1,5 +1,15 @@
 body {
     background-color: #fff;
+    font-family: sans-serif;
+    color: #444;
+    background: #2BC0E4;  /* fallback for old browsers */
+    background: linear-gradient(to bottom, #EAECC6, #88c4e5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+img {
+    width: 100%;
+    height: auto;
 }
 
 ul {
@@ -8,11 +18,37 @@ ul {
     padding-left: 0;
 }
 
-dl > * {
-    display: inline;
-
+input[type = "checkbox"]{
+    width: 2rem;
+    height: 2rem;
 }
 
+button[type="submit"]{
+    background: darkred;
+    color: white;
+    padding: 1.5rem 6rem;
+    font-weight: bold;
+    font-size: 2.86rem;
+    border-radius: 1rem;
+    cursor:pointer;
+}
+
+button[type="submit"]:hover{
+    background: indianred;
+}
+
+dl > * {
+    display: inline;
+}
+
+.main-container {
+    max-width: 1200px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 1rem;
+    min-height: 1000px;
+}
 
 .columns {
     display: flex;
@@ -22,39 +58,8 @@ dl > * {
     padding-right: 2rem;
 }
 
-.col2 {
-}
+.col2 {}
 
-.festivals-list {
-    padding: 0 1rem;
-}
-
-
-.festival-block {
-    background-color: #eee;
-    margin-bottom: 2rem;
-    padding: 1rem;
-}
-
-.festival-concert-list {
-    margin-top: 1rem;
-}
-
-.festival-concert-list li {
-    display: flex;
-    margin-bottom: 1rem;
-    justify-content: space-between;
-}
-
-.festival-concert-list li input {
-    margin-right: 1rem;
-}
-
-.festival-concert-list li label {
-    cursor: pointer;
-}
-
-.festival-concert-list label strong,
-.festival-concert-list label small {
-    display: block;
+.align-center {
+    text-align: center;
 }

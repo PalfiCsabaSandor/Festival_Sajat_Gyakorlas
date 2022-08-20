@@ -1,12 +1,14 @@
-<link rel="stylesheet" href="{{ asset('css/festivals.css') }}" type="text/css">
-
 @extends('layout')
 
 @section('title', 'Festivals')
 
+@section('styles')
+    <link rel="stylesheet" href="{{ asset('css/festivals.css') }}" type="text/css">
+@endsection
+
 @section('content')
 
-    <h1>festivals</h1>
+    <h1>Festivals</h1>
 
     <p>You have {{ count($alldata) }} festivals in the list.</p>
 
@@ -23,8 +25,9 @@
                     </div>
                 </div>
 
+
                 <div class="col2">
-                    <h2>{{$entry->name}}</h2>
+                    <h2><a href="/festivals/{{$entry->id}}">{{$entry->name}}</a></h2>
                     <div class="">
                         <span>11/08/2022</span>
                         <span>Bontida, Cluj</span>
@@ -68,7 +71,9 @@
         {{--idaig for--}}
 
     </ul>
-
+        <div class="align-center ">
+            <button type="submit">Let's Have FUUUN!</button>
+        </div>
     </form>
 
 @endsection

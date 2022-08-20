@@ -1,11 +1,60 @@
-@include('header')
-<html>
-<table>
-{{--    for ciklusba--}}
-    <div class="title"> This is the events name</div>
+@extends('layout')
+
+@section('title', 'Events')
+
+@section('styles')
+    <link rel="stylesheet" href="{{ asset('css/events.css') }}" type="text/css">
+@endsection
+
+@section('content')
+
+    <h1>Events</h1>
+
+    <form action="events" method="POST">
+        @csrf
+        <div class="events-list">
+(url('events'));
+
+        @foreach($eventData as $event)
+
+                <div class="event columns">
+                    <div class="col1">
+                        <input type="checkbox" name="events[]" value="{{$event->id}}" {{$event->isUserSubscribed() ? 'checked':''}} ">
+                    </div>
+
+                    <div class="col2">
+                        <img src="https://picsum.photos/150/200" alt="" class="poster">
+                    </div>
+
+                    <div class="col3">
+                        <h2>{{$event->artist_name}}</h2>
+                        <h3>{{$event->festival->name}}</h3>
+
+                        <p>{{$event -> description}}</p>
+
+                        <p>
+                            <strong>Start time: </strong> <span>{{$event->start_time}}</span> <br>
+                            <strong>End time:</strong> <span>{{$event->end_time}}</span>
+                        </p>
+
+                        <p>
+                            <strong>Location: </strong>
+                            <span>{{$event->latitude}}/{{$event->longitude}}</span>
+                        </p>
+
+                    </div>
+                </div>
+
+            @endforeach
 
 
+        </div>
 
-</table>
-</html>
-@include('footer')
+        <div class="align-center ">
+            <button type="submit">Let's Have FUUUN!</button>
+        </div>
+
+    </form>
+
+@endsection
+

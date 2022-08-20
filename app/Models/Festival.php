@@ -7,6 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Festival extends Model
 {
-        use HasFactory;
-        protected $fillable = ['description'];
+    use HasFactory;
+    protected $fillable = ['description'];
+
+    public function events()
+    {
+       return $this->hasMany(Event::class);
+    }
 }

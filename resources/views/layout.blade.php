@@ -14,8 +14,6 @@
         </div>
     </section>
 
-    <footer></footer>
-
+    <footer>@include('footer')</footer>
 </body>
 </html>
-@include('footer')
