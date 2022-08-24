@@ -42,13 +42,20 @@ dl > * {
 }
 
 .main-container {
-    max-width: 1200px;
+    max-width: 1024px;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
     padding-bottom: 1rem;
     min-height: 1000px;
 }
+
+
+.content-block {
+    background-color: #eee;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    }
 
 .columns {
     display: flex;
@@ -62,4 +69,10 @@ dl > * {
 
 .align-center {
     text-align: center;
+}
+
+.poster {   
+    width: 100%;
+    max-width: 300px;
+    min-width: 100px;
 }

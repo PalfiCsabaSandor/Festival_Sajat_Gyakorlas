@@ -11,9 +11,9 @@
         @endif
 
         <a href = {{url('festivals')}}>Festivals</a>
-        <a href = {{url('events')}}>Events<a/>
         @auth
-            <a href = {{url('profile')}}>Profile</a>
+            <a href={{url('events')}}>Events</a>
+            <a href={{url('profile')}}>Profile</a>
         @endauth
 
         @auth

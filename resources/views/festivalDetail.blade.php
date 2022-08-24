@@ -11,16 +11,16 @@
 <p>{{$festival->description}}</p>
 @foreach($events as $concert)
 
-        <div class="event columns">
+        <div class="event columns content-block">
 
 
-            <div class="col2">
-                <img src="https://picsum.photos/150/200" alt="" class="poster">
+            <div class="col1">
+                <img src="{{$concert->picture}}" alt="" class="poster">
             </div>
 
-            <div class="col3">
+            <div class="col2">
                 <h2>{{$concert->artist_name}}</h2>
-                <h3>A FESZTIVAL NEV JON IDE</h3>
+
 
                 <p>{{$concert -> description}}</p>
 

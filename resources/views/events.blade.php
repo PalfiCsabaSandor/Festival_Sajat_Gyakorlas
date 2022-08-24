@@ -13,17 +13,20 @@
     <form action="events" method="POST">
         @csrf
         <div class="events-list">
-(url('events'));
+
 
         @foreach($eventData as $event)
 
-                <div class="event columns">
+                <div class="event columns content-block">
                     <div class="col1">
                         <input type="checkbox" name="events[]" value="{{$event->id}}" {{$event->isUserSubscribed() ? 'checked':''}} ">
                     </div>
 
                     <div class="col2">
-                        <img src="https://picsum.photos/150/200" alt="" class="poster">
+                        <div class="poster">
+                            <img src={{$event->picture}} alt="" class="">
+                        </div>
+
                     </div>
 
                     <div class="col3">

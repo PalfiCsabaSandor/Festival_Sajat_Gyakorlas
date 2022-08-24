@@ -21,6 +21,7 @@ Route::get('/festivals', [\App\Http\Controllers\FestivalController::class, 'getA
 
 Route::get('/profile', [\App\Http\Controllers\UserController::class,'getLoggedUserData']
 ) ->middleware('auth'); //Ezzel a modszerrel a Controllerben kell implementalni
+//Route::get('/profile', \App\Http\Controllers\EventController::class, )
 
 Route::get('/events', [\App\Http\Controllers\EventController::class, 'getAllEventData']);
 Route::post('/events', [\App\Http\Controllers\EventController::class, 'updateUserEvents']);

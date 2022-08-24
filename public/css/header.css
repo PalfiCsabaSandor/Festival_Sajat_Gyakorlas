@@ -22,11 +22,11 @@
     font-size: 150%;
     margin-bottom: 1rem;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .linkbar a {
-
+    margin: 0 2rem;
 }
 
 .header{
@@ -36,6 +36,7 @@
 }
 .logoutlink{
     color:red;
+    margin-left: 2rem;
 }
 
 

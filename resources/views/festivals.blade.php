@@ -16,9 +16,9 @@
 
     <ul class="festivals-list">
 
-    @foreach($alldata as $entry)    {{--innentol for--}}
+    @foreach($alldata as $entry)
         <li>
-            <div class="festival-block columns">
+            <div class="festival-block columns content-block">
                 <div class="col1">
                     <div class="poster">
                         <img src={{$entry->picture}} alt="">
@@ -29,36 +29,11 @@
                 <div class="col2">
                     <h2><a href="/festivals/{{$entry->id}}">{{$entry->name}}</a></h2>
                     <div class="">
-                        <span>11/08/2022</span>
-                        <span>Bontida, Cluj</span>
+                        <span>{{$entry->description}}<br></span><br>
+                        <span><strong> Date: {{$entry->start_date}} : {{$entry->end_date}} </strong></span>
                     </div>
 
-                    <ul class="festival-concert-list">
-                        <li>
-                            <input type="checkbox" name="concert_unique_id" id="concert_unique_id">
-                            <label for="concert_unique_id">
-                                <strong>Justine biber</strong>
-                                <small>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, quae? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus at blanditiis eos ipsam porro quasi quos repellendus sed tempora tempore?</small>
-                            </label>
 
-                        </li>
-                        <li>
-                            <input type="checkbox" name="concert_unique_id" id="concert_unique_id">
-                            <label for="concert_unique_id">
-                                <strong>Justine biber</strong>
-                                <small>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, quae? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus at blanditiis eos ipsam porro quasi quos repellendus sed tempora tempore?</small>
-                            </label>
-
-                        </li>
-                        <li>
-                            <input type="checkbox" name="concert_unique_id" id="concert_unique_id">
-                            <label for="concert_unique_id">
-                                <strong>Justine biber</strong>
-                                <small>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, quae? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus at blanditiis eos ipsam porro quasi quos repellendus sed tempora tempore?</small>
-                            </label>
-
-                        </li>
-                    </ul>
                 </div>
             </div>
         </li>
@@ -71,9 +46,9 @@
         {{--idaig for--}}
 
     </ul>
-        <div class="align-center ">
-            <button type="submit">Let's Have FUUUN!</button>
-        </div>
+{{--        <div class="align-center ">--}}
+{{--            <button type="submit">Let's Have FUUUN!</button>--}}
+{{--        </div>--}}
     </form>
 
 @endsection
